@@ -95,7 +95,7 @@ jobs:
 
     - name: Install depedencies (windows)
       if: matrix.platform.host == 'windows-latest'
-      run: $VCPKG_ROOT/vcpkg install openssl
+      run: $VCPKG_ROOT/vcpkg install --recurse openssl --clean-after-build
       shell: bash
 
     - name: Install rust toolchain
